@@ -102,6 +102,7 @@ The worker starts, registers Quartz jobs, and waits for cron triggers to fire. A
 | `Infra.Sync` | `SyncOrchestrator` — fetches data from ERP and publishes messages to the bus. |
 | `Infra.IoC` | Composition root: registers all services, MassTransit (in-memory or Azure Service Bus), and Polly retry policy. |
 | `Workers` | .NET Worker Service entry point: Quartz job definitions and `Program.cs`. |
+| `IntegrationTests` *(TESTS/)* | xUnit + NSubstitute + MassTransit test harness — 51 integration tests covering all layers. |
 
 ---
 
