@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk"          Version="17.13.0" />
+    <PackageReference Include="xunit"                           Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio"       Version="2.8.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="NSubstitute"                     Version="5.3.0" />
+    <PackageReference Include="MassTransit"                     Version="8.4.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting"    Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\SRC\ErpEcommerceIntegration.Domain\ErpEcommerceIntegration.Domain.csproj" />
+    <ProjectReference Include="..\..\SRC\ErpEcommerceIntegration.Infra.ERPDatabase\ErpEcommerceIntegration.Infra.ERPDatabase.csproj" />
+    <ProjectReference Include="..\..\SRC\ErpEcommerceIntegration.Infra.ECommerce\ErpEcommerceIntegration.Infra.ECommerce.csproj" />
+    <ProjectReference Include="..\..\SRC\ErpEcommerceIntegration.Infra.MessageBus\ErpEcommerceIntegration.Infra.MessageBus.csproj" />
+    <ProjectReference Include="..\..\SRC\ErpEcommerceIntegration.Infra.Sync\ErpEcommerceIntegration.Infra.Sync.csproj" />
+    <ProjectReference Include="..\..\SRC\ErpEcommerceIntegration.Infra.IoC\ErpEcommerceIntegration.Infra.IoC.csproj" />
+    <ProjectReference Include="..\..\SRC\ErpEcommerceIntegration.Workers\ErpEcommerceIntegration.Workers.csproj" />
+  </ItemGroup>
+</Project>
